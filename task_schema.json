@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task",
+  "description": "Schema for task documents in the Todo app Firestore database",
+  "type": "object",
+  "properties": {
+    "completed": { "description": "Whether the task is completed", "type": "boolean" },
+    "created": { "description": "The time the task was created", "type": "string", "format": "date-time" },
+    "details": { "description": "The details of the task", "type": "string" },
+    "title": { "description": "The title of the task", "type": "string" },
+    "user": { "description": "Firestore document reference to the user who created the task, represented as a document path", "type": "string" }
+  },
+  "required": ["completed", "created", "title", "user"]
+}
